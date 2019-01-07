@@ -9,7 +9,7 @@ class App extends React.Component {
     const options = {
       activeClass:          'active', 
       sectionClassName:     'section',
-      anchors:              ['wallet', 'features', 'for-whom'],
+      // anchors:              ['wallet', 'features', 'for-whom'],
       scrollBar:            false,
       navigation:           true,
       verticalAlign:        true,
@@ -20,17 +20,10 @@ class App extends React.Component {
     return (
       <div>
         <SectionsContainer {...options}>
-          <Section color="#222">
-            <ForWhom />
-          </Section>
-          <Section>
-            <Intro />
-	        </Section>
-          <Section color="#ffffa0">
-            <SignUp />
-          </Section>
+          {/*<Section><Intro /></Section>*/}
+          <Section color="#222"><ForWhom /></Section>
+          {/*<Section><SignUp /></Section>*/}
         </SectionsContainer>
-        <div style={{ marginBottom: 20 }}></div>
       </div>
     );
   }

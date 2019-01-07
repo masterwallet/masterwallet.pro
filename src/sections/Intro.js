@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const IntroDiv = styled.div`
     font-size: 14px;
+    height: 100%;
     color:  #2e2e2e; /* #b9b9b9; */
     background: url(static/images/lightbk.jpg) repeat-y;
     background-size: cover;
@@ -54,13 +55,25 @@ const IntroDiv = styled.div`
     }
 
     .flex h3 {
-        width: 33%;
+        flex: 1;
         text-align: center;
         font-size: 20px;
         color: #383838;
         padding-bottom: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
         font-family: 'Raleway', sans-serif;
     }
+    .flex .img-wrap {
+        display: block;
+        vertical-align: bottom;
+        text-align: center;
+    }
+    .flex .img-wrap img {
+        height: 250px;
+        width: auto;
+    }
+
     @media(max-width: 800px) {
         .flex { display: block;}
         .flex h3 { width: 75%;  margin: 0px auto; text-align: center;  }
@@ -86,9 +99,19 @@ export const Intro = () => (
         </div>
 
         <div className="flex">
-            <h3>Provide valuable content for your supporters and get paid in cryptocurrency</h3>
-            <h3>Use crypto for invoices and regular payments in your business</h3>
-            <h3>Get tips and donations in crypto seamlessly, saving time on accounting</h3>
+            <h3>
+                <div className='img-wrap'>
+                    <img src='static/images/info-pig.png' alt='' />
+                </div>
+                Use crypto for invoices and regular payments in your business
+            </h3>
+            <h3>
+                <div className='img-wrap'>
+                    <img src='static/images/info-calendar-coins.png' alt=''/>
+                </div>
+                Provide valuable content for members of your community and get paid 
+                by them in crypto on monthly basis.
+            </h3>
         </div>
     </IntroDiv>
 );
