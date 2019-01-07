@@ -15,7 +15,7 @@ const FooterDiv = styled.div`
 export const SiteFooter = () => (
   <Footer>
     <FooterDiv>
-      Copyright &copy; 2018 Master Waller PRO LLC
+      Copyright &copy; 2019 Master Waller PRO LLC
       &nbsp;
       <a href="https://github.com/masterwallet/" target="_blank" rel="noopener noreferrer">Github</a>
     </FooterDiv>

@@ -32,8 +32,8 @@ export const SiteHeader = () => (
   <Header>
     <HeaderDiv>
       <a href="#wallet">Wallet</a>
-      <a href="#features">Features</a>
-      <a href="#telos">Telos BP</a>
+      <a href="#for-whom">For Whom</a>
+      <a href="#sign-up">Sign Up</a>
     </HeaderDiv>
   </Header>
 );

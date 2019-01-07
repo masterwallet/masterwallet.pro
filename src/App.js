@@ -2,41 +2,35 @@ import React from 'react';
 import { SectionsContainer, Section } from 'react-fullpage';
 import { SiteHeader } from './SiteHeader';
 import { SiteFooter } from './SiteFooter';
-import { Ring } from './Ring';
-import { Features } from './Features';
-import { TelosBlockProducer } from './TelosBlockProducer';
+import { Intro, ForWhom, SignUp } from './sections/index';
 
 class App extends React.Component {
   render() {
     const options = {
       activeClass:          'active', 
       sectionClassName:     'section',
-      anchors:              ['wallet', 'features', 'telos'],
+      anchors:              ['wallet', 'features', 'for-whom'],
       scrollBar:            false,
       navigation:           true,
       verticalAlign:        true,
       sectionPaddingTop:    '0px',
-      sectionPaddingBottom: '20px',
+      sectionPaddingBottom: '0px',
       arrowNavigation:      true
     };
     return (
       <div>
-        <SiteHeader />
-        <SiteFooter />
         <SectionsContainer {...options}>
-          <Section className="custom-section" verticalAlign="true" color="#444">
-             <header className="App-header" style={{ textAlign: 'center' }}>
-               <h1 style={{ color: '#fff', fontWeight: 900, fontSize: 48, textTransform: 'uppercase' }}>Master Wallet Pro</h1>
-               <Ring r={300} />
-             </header>
-	  </Section>
-          <Section color="#A7DBD8">
-            <Features />
+          <Section color="#222">
+            <ForWhom />
           </Section>
-          <Section color="#E0E4CC">
-            <TelosBlockProducer />
+          <Section>
+            <Intro />
+	        </Section>
+          <Section color="#ffffa0">
+            <SignUp />
           </Section>
         </SectionsContainer>
+        <div style={{ marginBottom: 20 }}></div>
       </div>
     );
   }
